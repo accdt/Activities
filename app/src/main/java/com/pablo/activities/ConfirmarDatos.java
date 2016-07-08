@@ -26,7 +26,7 @@ public class ConfirmarDatos extends AppCompatActivity {
         tvMNombre = (TextView) findViewById(R.id.tvMNombre);
         tvMTelefono = (TextView) findViewById(R.id.tvMTelefono);
         tvMEmail = (TextView) findViewById(R.id.tvMEmail);
-        tvMDescripcion = (TextView) findViewById(R.id.tvDescrip);
+        tvMDescripcion = (TextView) findViewById(R.id.tvMDescripcion);
 
         tvMNombre.setText(nombre);
         tvMTelefono.setText(telefono);
