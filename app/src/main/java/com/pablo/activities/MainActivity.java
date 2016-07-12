@@ -11,6 +11,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    public final static int MI_REQUEST_CODE = 1;
+    int datos;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +32,14 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(getResources().getString(R.string.ptelefono), tiTelefono.getText().toString());
         intent.putExtra(getResources().getString(R.string.pemail), tiEmail.getText().toString());
         intent.putExtra(getResources().getString(R.string.pdescripcion), tiDescripcion.getText().toString());
-        startActivity(intent);
+        startActivityForResult(intent, MI_REQUEST_CODE);
+    }
 
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        if(requestCode == MI_REQUEST_CODE){
+            if(resultCode == RESULT_OK){
 
+            }
+        }
     }
 }

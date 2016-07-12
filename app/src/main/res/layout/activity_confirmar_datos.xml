@@ -68,6 +68,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/top2"
         android:textAllCaps="false"
-        />
+        android:onClick="volver"/>
 
 </RelativeLayout>

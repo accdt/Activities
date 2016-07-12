@@ -1,8 +1,10 @@
 package com.pablo.activities;
 
-import android.support.design.widget.TextInputEditText;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.DatePicker;
 import android.widget.TextView;
 
 public class ConfirmarDatos extends AppCompatActivity {
@@ -12,16 +14,21 @@ public class ConfirmarDatos extends AppCompatActivity {
     TextView tvMEmail;
     TextView tvMDescripcion;
 
+    String nombre;
+    String telefono;
+    String email;
+    String descripcion;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmar_datos);
 
         Bundle parametros = getIntent().getExtras();
-        String nombre = parametros.getString(getResources().getString(R.string.pnombre));
-        String telefono = parametros.getString(getResources().getString(R.string.ptelefono));
-        String email= parametros.getString(getResources().getString(R.string.pemail));
-        String descripcion= parametros.getString(getResources().getString(R.string.pdescripcion));
+        nombre = parametros.getString(getResources().getString(R.string.pnombre));
+        telefono = parametros.getString(getResources().getString(R.string.ptelefono));
+        email= parametros.getString(getResources().getString(R.string.pemail));
+        descripcion= parametros.getString(getResources().getString(R.string.pdescripcion));
 
         tvMNombre = (TextView) findViewById(R.id.tvMNombre);
         tvMTelefono = (TextView) findViewById(R.id.tvMTelefono);
@@ -32,5 +39,12 @@ public class ConfirmarDatos extends AppCompatActivity {
         tvMTelefono.setText(getResources().getString(R.string.dato_telefono) + telefono);
         tvMEmail.setText(getResources().getString(R.string.dato_email) + email);
         tvMDescripcion.setText(getResources().getString(R.string.dato_descripcion) + descripcion);
+    }
+
+    public void volver (View v){
+        Intent datos = new Intent();
+
+        setResult(RESULT_OK,datos);
+        finish();
     }
 }
