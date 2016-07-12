@@ -22,7 +22,7 @@
         android:id="@+id/tvMNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="@string/pnombre"
         android:layout_below="@id/tvConfirmar"
         android:layout_marginTop="@dimen/top2"
         android:textSize="@dimen/text"/>
@@ -31,7 +31,7 @@
         android:id="@+id/tvMFecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="@string/pfecha"
         android:layout_below="@id/tvMNombre"
         android:textSize="@dimen/text"/>
 
@@ -39,7 +39,7 @@
         android:id="@+id/tvMTelefono"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="@string/ptelefono"
         android:layout_below="@id/tvMFecha"
         android:textSize="@dimen/text"/>
 
@@ -47,7 +47,7 @@
         android:id="@+id/tvMEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="@string/pemail"
         android:layout_below="@id/tvMTelefono"
         android:textSize="@dimen/text"/>
 
@@ -55,7 +55,7 @@
         android:id="@+id/tvMDescripcion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="@string/pdescripcion"
         android:layout_below="@id/tvMEmail"
         android:textSize="@dimen/text"/>
 

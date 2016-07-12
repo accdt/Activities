@@ -13,4 +13,7 @@
     <string name="pemail">email</string>
     <string name="pfecha">fecha</string>
     <string name="pdescripcion">descripcion</string>
+    <string name="dato_telefono">Telefono: </string>
+    <string name="dato_email">E-mail: </string>
+    <string name="dato_descripcion">Descripción: </string>
 </resources>
