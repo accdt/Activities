@@ -1,6 +1,7 @@
 package com.pablo.activities;
 
 import android.content.Intent;
+import android.icu.util.Calendar;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,12 +13,19 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     public final static int MI_REQUEST_CODE = 1;
-    int datos;
+    DatePicker fecha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    private void fecha (View v){
+        DatePicker datePicker = (DatePicker) findViewById(R.id.dpFecha);
+        int day = datePicker.getDayOfMonth();
+        int month = datePicker.getMonth() + 1;
+        int year = datePicker.getYear();
     }
 
     public void datos (View v){
