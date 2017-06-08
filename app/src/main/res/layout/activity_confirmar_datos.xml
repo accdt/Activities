@@ -22,7 +22,7 @@
         android:id="@+id/tvMNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pnombre"
+        android:text=""
         android:layout_below="@id/tvConfirmar"
         android:layout_marginTop="@dimen/top2"
         android:textSize="@dimen/text"/>

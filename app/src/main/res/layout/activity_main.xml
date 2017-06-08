@@ -14,30 +14,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint1"
-            android:singleLine="true"/>
+            android:maxLines="1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="12dp" />
 
-    <TableLayout
-        android:id="@+id/rlDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tiNombre"
-        android:layout_centerHorizontal="true">
-
-        <DatePicker
-            android:id="@+id/dpFecha"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/date_picker"
-            android:datePickerMode="spinner"
-            android:calendarViewShown="false"/>
-
-            <Button
-                android:id="@+id/btnFecha"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/boton_fecha"
-                android:onClick="fecha"/>
-
-    </TableLayout>
 
        <android.support.design.widget.TextInputEditText
         android:id="@+id/tiTelefono"
@@ -45,7 +26,8 @@
         android:layout_height="wrap_content"
         android:hint="@string/hint2"
         android:inputType="phone"
-        android:layout_below="@id/rlDate"/>
+           android:layout_below="@+id/tiNombre"
+           android:layout_alignParentStart="true" />
 
     <android.support.design.widget.TextInputEditText
         android:id="@+id/tiEmail"
@@ -53,22 +35,26 @@
         android:layout_height="wrap_content"
         android:hint="@string/hint3"
         android:inputType="textEmailAddress"
-        android:layout_below="@id/tiTelefono"/>
+        android:layout_marginTop="43dp"
+        android:layout_below="@+id/dpFecha"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/tvDescrip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tiEmail"
         android:text="@string/descripcion"
         android:textSize="@dimen/text"
-        android:layout_marginTop="@dimen/top"/>
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/tiEmail"
+        android:layout_alignParentStart="true" />
 
     <android.support.design.widget.TextInputEditText
         android:id="@+id/tiDescrip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvDescrip"/>
+        android:layout_below="@+id/tvDescrip"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/btnSiguiente"
@@ -77,4 +63,16 @@
         android:text="@string/boton_siguiente"
         android:layout_alignParentBottom="true"
         android:onClick="datos"/>
+
+    <DatePicker
+        android:id="@+id/dpFecha"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/date_picker"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:layout_below="@+id/tiTelefono"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp" />
+
+
 </RelativeLayout>

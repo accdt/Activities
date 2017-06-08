@@ -13,32 +13,25 @@ public class ConfirmarDatos extends AppCompatActivity {
     TextView tvMTelefono;
     TextView tvMEmail;
     TextView tvMDescripcion;
-
-    String nombre;
-    String telefono;
-    String email;
-    String descripcion;
+    TextView tvMFecha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirmar_datos);
 
-        Bundle parametros = getIntent().getExtras();
-        nombre = parametros.getString(getResources().getString(R.string.pnombre));
-        telefono = parametros.getString(getResources().getString(R.string.ptelefono));
-        email= parametros.getString(getResources().getString(R.string.pemail));
-        descripcion= parametros.getString(getResources().getString(R.string.pdescripcion));
-
         tvMNombre = (TextView) findViewById(R.id.tvMNombre);
         tvMTelefono = (TextView) findViewById(R.id.tvMTelefono);
         tvMEmail = (TextView) findViewById(R.id.tvMEmail);
         tvMDescripcion = (TextView) findViewById(R.id.tvMDescripcion);
+        tvMFecha = (TextView) findViewById(R.id.tvMFecha);
 
-        tvMNombre.setText(nombre);
-        tvMTelefono.setText(getResources().getString(R.string.dato_telefono) + telefono);
-        tvMEmail.setText(getResources().getString(R.string.dato_email) + email);
-        tvMDescripcion.setText(getResources().getString(R.string.dato_descripcion) + descripcion);
+            Intent datos = getIntent();
+            tvMNombre.setText("Nombre: " +  datos.getStringExtra("nombre"));
+            tvMTelefono.setText("Telefono: " + datos.getStringExtra("telefono"));
+            tvMEmail.setText("Email: " + datos.getStringExtra("email"));
+            tvMDescripcion.setText(datos.getStringExtra("descripcion"));
+            tvMFecha.setText("Fecha " + datos.getStringExtra("fecha"));
     }
 
     public void volver (View v){

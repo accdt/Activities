@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Datos de Contacto</string>
+    <string name="app_name">Loggin</string>
     <string name="hint1">Nombre Completo</string>
     <string name="hint2">Telefono</string>
     <string name="hint3">Email</string>
